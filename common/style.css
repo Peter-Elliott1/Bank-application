@@ -1,0 +1,441 @@
+/*GROUP UNIT - Group A 
+* By :
+* Tom Anderson
+* Peter Elliot
+* Ciara McMahon
+* Liam Maloney
+*/
+
+
+body {
+	 background: linear-gradient(to bottom, #e7f2f6 0%,#ffffff 34%,#ffffff 61%,#e7f2f6 99%);
+	color: #444468;
+
+}
+
+#header {
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	background: linear-gradient( 100deg, #e7f2f6 0%,#ffffff 99%);	
+	border-bottom: double 3px lightgray;
+	z-index: 100;
+}
+/*styles for the logout tab in the header */
+
+#wrapper {							/*used to position the 'tab' */
+		width: 980px;
+		margin: 0 auto 0 auto;
+		position: relative;
+		height: 100%;
+}
+
+#logout {
+	padding: 14px 28px 4px 12px;
+	position: absolute;     		/* place  the 'tab' element on the bottom right of the wrapper */
+	right: 0px;
+	top: -4px;
+	border-radius: 0px 0px 15px 15px ;
+	background: #2e7a94;
+	color: white;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 14px;
+	border: 1px solid lightgray;
+	border-top: none;
+	box-shadow: -3px 3px 3px rgba(0,0,0,0.4);
+	text-transform: uppercase;
+	cursor: pointer;	
+}
+
+#logout img {
+	float: left;
+	margin-right: 13px;
+	position: relative;
+	top: -2px;
+}
+
+/*main page element styles */
+#container {
+	position: relative;				/*required to make it stretch to bottom of page */
+	bottom:0px;						/*required to make it stretch to bottom of page */
+	height: 70%;				/*required to make it stretch to bottom of page */
+	margin: 0 auto 0 auto;
+	width: 980px;
+	padding-top: 91px;  			/*height of header + border + nav */
+	border-left: solid 1px lightgray;
+	border-right: solid 1px lightgray;
+	background: #e9f4fa;
+	color: #2f84a1;
+
+}
+
+form {
+	position: relative;  			/*required to place buttons from bottom later */
+	height: 75%;
+	overflow: auto;
+	width: 950px;
+	margin: 0 auto 0 auto;
+	padding-bottom: 100px;   		/*some space to put the buttons */
+}
+
+#helpbtn {          					/* image to click when to show help positioned in form header*/
+	position: absolute;
+	top: 13px;
+	right: 25px;
+}
+
+#help {
+	width: 500px;
+	padding: 45px 20px;
+	min-height: 20px;
+	background: linear-gradient(135deg, #e7f2f6 0%,#fafaff 46%,#f7f7ff 99%); 
+	border: solid 1px #4d81a9;
+	overflow: hidden;
+	position: absolute;								/* requred to drag it with JS */
+	top: 40%;
+	left: 30%;
+	z-index: 1000;
+	border-radius: 8px;
+	box-sizing: border-box;
+	visibility: hidden;
+	box-shadow: 3px 3px 2px rgba(0,0,0,0.4);
+}
+#help h1 {
+    box-sizing: border-box;
+    margin: 0 auto 0 auto;
+	font-size: 16px;
+	background: #2e7a94;
+	color: #efefff;
+	width: 100%;
+	display: block;
+	font-weight: 500;
+	min-height: 30px;
+	border-radius-top: 5px;
+	padding: 6px;
+	padding-left: 10px;
+	text-transform: uppercase;
+	position: absolute;
+	top: 0px;
+	left: 0px;  
+	cursor:  -webkit-grab;					/* change cursor to a hand */
+   }
+   
+
+   
+
+#help img {
+	position: absolute;
+	top: 4px;
+	right: 8px;
+	z-index: 50010;							/*to get it in front of the help div and header */
+}
+
+
+iframe {
+	width: 978px;
+	height: 550px;
+	border:none;
+	display: block;	
+}
+
+form  h2{
+	padding: 8px;
+	padding-left: 20px;
+	margin: 5px;
+	margin-bottom: 25px;
+	text-align: left;
+	background: #2e7a94;
+	border-radius: 8px;
+	font-weight: 500;
+	color: #efefff;
+	display: block;
+}
+
+
+
+form  h2 img{
+	cursor: help;
+	}
+
+fieldset {
+background: linear-gradient(135deg, #e7f2f6 0%,#fafaff 46%,#f7f7ff 99%); 
+border: solid 1px #4d91a9;
+}
+
+
+
+input{
+	box-sizing: border-box;
+	width: 200px;
+	padding: 4px;
+	font-size: 16px;
+	display: inline-block;
+	border-radius: 5px;
+	color: #444468;
+	background: #eee;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/*general purpose style to cover all of the width of the form */
+.fullwidth {
+	box-sizing: border-box;
+	width: 940px;
+	margin: 10px auto 10px auto;
+	padding: 8px;
+	padding-bottom: 12px;
+	overflow: hidden;
+	clear: both;
+}
+
+.fullwidth div {
+	width: 200px;
+	display: inline-block;
+	padding-left: 25px;
+}
+
+label {
+
+	margin: 5px 10px 5px 10px;
+	padding: 10px;
+	padding-top: 5px;
+	width: 170px;
+	display: inline-block;
+	text-align: right;
+	font-size: 16px;
+}
+
+
+select {
+    box-sizing: border-box;
+	width: 200px;
+	padding: 4px;
+	font-size: 16px;
+	display: inline-block;
+	border-radius: 5px;
+	color: #444468;
+	background: #eee;
+	margin-top: 5px;
+	margin-bottom: 5px;
+    border: inset 2px rgb(238,238,238);
+
+
+}
+
+/*general purpose style to cover half the width of the form */
+.halfwidth {
+
+	height: auto;
+	overflow: hidden;
+	margin: 10px 8px 10px 5px;
+	padding: 5px;
+	padding-bottom: 20px;
+	width: 450px;
+	min-height: 80px;
+	float: left;
+	display: inline;
+	
+}
+
+.halfwidth label {
+	width: 120px;
+	margin: 0px 10px 2px 0px;
+	padding: 5px;
+	float: left;
+
+}
+
+.halfwidth div {
+	margin: 0px 0px 2px 0px;
+	padding: 5px;
+	width: 280px;
+	float: left;
+	display: inline-block;
+	font-size: 16px;
+	text-transform: capitalize;
+	line-height: 1.3em;
+}
+
+
+//input[type="text"] {
+
+//	text-transform: capitalize;
+//}
+
+
+/*some fancy button styles */
+
+ input[type="submit"] ,  input[type="button"] , input[type="reset"] {
+	padding: 5px;
+	margin: 25px 20px 0px 20px;
+	border: solid 1px CornflowerBlue ;
+	background: linear-gradient(to bottom, #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
+	width: 120px;
+	border-radius: 14px;
+	outline: none; 
+ }   
+ 
+
+ 
+ 
+input[type="submit"]:active ,  input[type="button"]:active,input[type="reset"]:active {
+	background: linear-gradient(to bottom, #98bede 0%,#b5dbff 49%,#98bede 100%); 
+	border: solid 1px DarkSlateBlue ;
+	outline: none;    /* get rid of the default chrome blue glow */
+}
+
+input[type="submit"] , input[type="button"]{
+
+	position: absolute;
+	bottom: 40px;
+	right: 70px;
+	outline: none;  	 /* get rid of the default chrome blue glow */
+}
+
+input[type="reset"]{
+
+	position: absolute;
+	bottom: 40px;
+	left: 70px;
+	outline: none;  	 /* get rid of the default chrome blue glow */
+}
+
+#submit  {
+	position: absolute;
+	bottom: 40px;
+	right: 70px;
+	outline: none;  	 /* get rid of the default chrome blue glow */
+}
+/* ----------------------------------------------------------------------------------------- */
+/* ------------------------------------ TABLE STYLES --------------------------------------- */
+/* ----------------------------------------------------------------------------------------- */
+
+
+ 	table {
+ 		width: 100%;
+ 		border: solid 5px white;
+ 		margin-top: 40px;
+ 	}
+ 	 	
+	
+ 	.fourcol th , .fourcol td {
+ 		width: 25%;
+ 		padding: 6px;
+ 		text-align: center;
+ 		border: none;
+ 	}
+ 
+    table.unsortable tr:nth-child(odd) {
+   
+   	background: linear-gradient(to bottom, #e7f2f6 0%,#ffffff 34%,#ffffff 61%,#e7f2f6 99%);
+  	background: #e7f2f6;
+   	
+   }
+   
+    table.unsortable tr:nth-child(even) {
+   	background: blue;
+   	background: linear-gradient(135deg, #e7f2f6 0%,#fafaff 46%,#f7f7ff 99%); 
+   	background: #f7f7ff;
+   	
+   }
+   
+
+	table.unsortable tr:first-child {
+   	background: white;
+    color: #4f8fbf;
+   	font-family: "Times New Roman", Times, Serif;
+   	font-size: 14px;
+   	text-transform: uppercase;
+   }
+   
+/*---------login screen --------*/
+  #login {
+	width: 80%;
+	margin: 60px auto 40px auto;
+	padding: 25px;
+	border-radius: 15px;
+	background: #2e7a94;
+	color: white;
+	border: solid 2px lightgray;
+  }
+  
+  #login label {
+	margin-left: 80px;
+  }
+  
+    #login input {
+	width: 250px;
+  }
+  
+ /*---------login screen --------*/
+
+ 
+/* ----------------------------------------------------------------------------------------- */
+/* ---------------------- ADDITIONAL MENU STYLES / COLOURS ETC ------------------------- */
+/* ----------------------------------------------------------------------------------------- */
+
+#nav {
+	box-shadow: 0 4px 4px -2px #888;
+}
+.dropmenu{
+	border: none;
+
+}
+
+.dropmenu li {
+	min-height: 100%;
+	background: linear-gradient(to bottom, #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
+	border: solid 1px #c8eefb ;
+	border-bottom: none;
+	
+
+}
+
+.dropmenu li:hover{
+	background: linear-gradient(to bottom, #b3dced 0%,#29b8e5 50%,#bce0ee 100%);
+
+}
+
+.dropmenu li:active{
+	background: linear-gradient(to bottom, #25b2ea 1%,#81cce2 50%,#44c0ed 100%);
+	
+}
+
+.dropmenu li a {
+	color: #444468;
+	font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+	font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.menu  {
+	background: linear-gradient(135deg, #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
+	border: solid 1px lightgray;
+	box-shadow: 0 4px 4px -2px #888;
+}
+
+.menu li {
+	background: transparent;
+	border: none;	
+	border-bottom: dotted 1px #b8deeb ;	
+}
+
+
+.submenu {
+	background: linear-gradient(-135deg, #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
+	border: solid 1px lightgray;
+	box-shadow: 0 4px 4px -2px #888;
+}
+
+.submenu li {
+	background: transparent;
+	border: none;
+	border-bottom: dotted 1px #b8deeb  ;	
+}
+
+
+  .clear {
+	clear: both;
+  }

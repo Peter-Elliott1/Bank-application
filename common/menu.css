@@ -1,0 +1,133 @@
+/*GROUP UNIT - Group A 
+* By :
+* Tom Anderson
+* Peter Elliot
+* Ciara McMahon
+* Liam Maloney
+*/
+
+
+
+* {	
+	margin: 0;
+	padding: 0;
+}
+#nav {
+	width: 100%;
+	position: absolute;  /*needed to position most of its contents */
+	top: 53px;
+	background: linear-gradient(to bottom, #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
+	z-index: 500;
+}
+.dropmenu{
+	position: relative;
+	margin: 0 auto 0 auto;
+	width: 980px;
+	height: 38pxpx; 
+}
+
+.dropmenu li {
+	
+	position: relative;
+	list-style: none;
+	width: 137px;
+	height: 38px;
+	overflow: hidden;
+	float: left;
+	box-sizing: border-box;
+	padding: 0;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+	
+}
+
+.dropmenu li a {
+	padding-top: 9px;
+	display: block;
+    -webkit-user-select: none;
+	height: 40px;
+}
+
+#reportsitem {
+	width: 147px;
+}
+
+#managmentItem  {
+	width: 185px;
+}
+
+#password {
+	width: 100px;
+}
+.menu {
+	visibility:hidden;
+	position: absolute;
+	top: 37px;
+	width: 137px;
+}
+
+.menu li {
+	position: relative;
+	top: 0px;
+	display: inline;
+	width: 100%;
+}
+
+#menu1 {
+	left: 0px;      
+}
+
+#menu2 {
+	left: 137px;
+}
+
+#menu3 {
+	left: 274px;
+}
+
+#menu4 {
+	left: 411px;
+}
+
+#menu5 {
+	width: 147px;
+	left: 548px;
+}
+
+#menu6 {
+	width: 185px;
+	left: 695px;
+}
+
+.submenu  {
+	position: absolute;
+	visibility: hidden;
+	width: 137px;
+	left: 100%;
+}
+
+.submenu li {
+	width: 100%;
+}
+
+#submenu1{
+	top: 1px;	
+}
+
+#submenu2{
+	top: 33%;
+}
+
+#submenu3{
+	top: 66%;
+}
+#submenu4 {
+	left: 100%;
+	top: 1px;
+}
+#submenu5 {
+	left: 100%;
+	top: 33%;
+}
+
